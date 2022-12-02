@@ -3,20 +3,9 @@
 ## Year:    2022
 ## Day:     02
 
+from tools.filereader import *
 
-data_file = open("01.data",'r')
-
-elves = []
-temp = []
-
-for line in data_file:
-    line = line.strip()
-
-    if line != "":
-        temp.append(int(line))
-    else:
-        elves.append(temp)
-        temp = []
+elves = generate_array_of_elves()
 
 elf_tallies = []
 
